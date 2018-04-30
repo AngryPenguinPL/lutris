@@ -9,7 +9,7 @@ Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 
 BuildArch:      noarch
 BuildRequires:  librsvg
-BuildRequires:  python
+BuildRequires:  pkgconfig(python3)
 BuildRequires:  python-pyxdg
 BuildRequires:	python-gi
 BuildRequires:	python-gobject
@@ -31,10 +31,10 @@ on Linux.
 %setup -qn %{name}
 
 %build
-python setup.py build
+%{__python3} setup.py build
 
 %install
-python setup.py install --root=%{buildroot} --skip-build
+python3 setup.py install --root=%{buildroot} --skip-build
 
 # SVG icon is broken in Qt applications, we use PNGs for now
 pushd %{buildroot}%{_iconsdir}/hicolor
