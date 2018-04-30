@@ -10,6 +10,7 @@ Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 BuildArch:      noarch
 BuildRequires:  librsvg
 BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3egg(setuptools)
 BuildRequires:  python-pyxdg
 BuildRequires:	python-gi
 BuildRequires:	python-gobject
