@@ -31,7 +31,6 @@ on Linux.
 
 %prep
 %setup -q -n %{name}
-%autopatch -p1
 
 %build
 %py3_build
