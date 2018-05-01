@@ -33,10 +33,10 @@ on Linux.
 %setup -q -n %{name}
 
 %build
-%py3_build
+%{__python3} setup.py build
 
 %install
-%py3_install
+%{__python3} setup.py install
 
 %files
 %{_bindir}/%{name}
