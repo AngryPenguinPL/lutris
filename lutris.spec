@@ -8,17 +8,19 @@ URL:            http://lutris.net
 Source0:        http://lutris.net/releases/%{name}_%{version}.tar.xz
 
 BuildArch:      noarch
-BuildRequires:  python3
-BuildRequires:  python3-gobject3
-BuildRequires:  python3-pyxdg
+BuildRequires:  pkgconfig(python3)
+BuildRequires:  python3egg(setuptools)
+BuildRequires:  python3egg(gobject)
+BuildRequires:  python3egg(gi)
+BuildRequires:  python-pyxdg
 
-Requires:       python3-dbus
-Requires:       python3-evdev
-Requires:       python3-gobject3
-Requires:       python3-pyxdg
-Requires:       python3-yaml
+Requires:       python-dbus
+Requires:       python-evdev
+Requires:       python-gobject3
+Requires:       python-pyxdg
+Requires:       python-yaml
 Requires:       xrandr
-Recommends:     python3-pyinotify
+Recommends:     python-pyinotify
 
 %description
 Lutris is a gaming platform for GNU/Linux. Its goal is to make
